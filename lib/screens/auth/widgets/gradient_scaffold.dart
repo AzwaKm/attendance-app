@@ -20,7 +20,7 @@ class GradientScaffold extends StatelessWidget {
               Colors.blue[700]!,
               Colors.blue[500]!,
               Colors.blue[300]!,
-            ]
+            ],
           )
         ),
         child: SafeArea(
@@ -37,7 +37,7 @@ class GradientScaffold extends StatelessWidget {
                   SizedBox(height: 8),
                   _buildSubtitle(),
                   SizedBox(height: 48),
-                  // child
+                  child
                 ],
               ),
             ),
@@ -71,7 +71,7 @@ class GradientScaffold extends StatelessWidget {
       style: TextStyle(
         fontSize: 32,
         fontWeight: FontWeight.bold,
-        color: Colors.white
+        color: Colors.white,
       ),
       textAlign: TextAlign.center,
     );
@@ -83,7 +83,7 @@ class GradientScaffold extends StatelessWidget {
       style: TextStyle(
         fontSize: 16,
         color: Colors.white.withValues(alpha: 0.9)
-      ),
+      )
     );
   }
 }

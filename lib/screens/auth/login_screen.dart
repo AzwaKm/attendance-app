@@ -41,13 +41,13 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
-  @override
+  @override 
   void dispose() {
     _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
   }
-
+  
   @override
   Widget build(BuildContext context) {
     return GradientScaffold(
@@ -73,9 +73,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       obscureText: false,
                       icon: Icons.email_outlined,
                       keyboardType: TextInputType.emailAddress,
-                      validator: (value) => value?.isEmpty ?? true ? 'Please enter your email' : null, // kalau kosong berarti true nya nampilin 'Please enter your email'
+                      validator: (value) => value?.isEmpty ?? true ? 'Please enter your email' : null ,
                     ),
-                    SizedBox(height: 18),
+                    SizedBox(height: 16),
                     AuthTextField(
                       controller: _passwordController,
                       label: 'Password',

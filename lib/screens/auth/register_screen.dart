@@ -13,13 +13,13 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
-  final _formKey = GlobalKey<FormState>(); // untuk perubahan state
+  final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
   final _authService = AuthServices();
-  bool _isLoading = false; // loading indicator
-  bool _obscurePassword = true; // password otomatis tidak kelihatan
+  bool _isLoading = false;
+  bool _obscurePassword = true;
   bool _obscureConfirmPassword = true;
 
   Future<void> _register() async {
@@ -29,11 +29,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
     try {
       await _authService.registerWithEmailAndPassword(
-        _emailController.text.trim(), // biar spasi tidak kebaca saat copy code otp
+        _emailController.text.trim(),
         _passwordController.text.trim()
       );
     } catch (e) {
-      // mounted: ketika widget masih aktif dan berada pada widget tree
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text(e.toString()), backgroundColor: Colors.red)
