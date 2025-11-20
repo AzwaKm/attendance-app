@@ -59,7 +59,7 @@ class StorageServices {
   }
 
   // get photo from firebase realtime database
-  Future<String?> getPhotobase64(String photoKey) async {
+  Future<String?> getPhotoBase64(String photoKey) async {
     try {
       final user = _auth.currentUser;
       if (user == null) return null;
