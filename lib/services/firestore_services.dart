@@ -63,4 +63,6 @@ class FirestoreServices {
           {...querySnapshot.docs.first.data(), 'id': querySnapshot.docs.first.id}
         );
   }
+
+  Future<void> AttendanceRecords(AttendanceRecord record) async {}
 }

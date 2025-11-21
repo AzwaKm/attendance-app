@@ -5,6 +5,7 @@ import 'package:permission_handler/permission_handler.dart';
 class CameraButton extends StatelessWidget {
   final Function(String imagePath) onImageCaptured;
   final String buttonText;
+  
 
   const CameraButton({super.key, required this.onImageCaptured, required this.buttonText});
 
